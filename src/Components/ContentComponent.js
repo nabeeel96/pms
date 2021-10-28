@@ -14,6 +14,7 @@ import DoctorPrescribedForm from "../Patient/DoctorPrescribedForm";
 import PatientsReport from "../Reports/PatientsReport";
 import CallDetailReport from "../Reports/CallDetailReport";
 import Login2 from "../login/Login2";
+import NotFound404 from "../Pages/404";
 
 
 const { Content } = Layout
@@ -27,36 +28,36 @@ const ContentComponent = () => {
         setPathname(capitalize(location.pathname.replace("/", '')))
     }, [location])
  
-    return(
-        <Content style={{  background: 'transparent'}}>
-            <Switch>
-                <PublicRoute exact path="/sign-in">
-                    <Login2/>
-                </PublicRoute>
-                <PrivateRoute exact path="/dashboard">
-                    <Dashboard /> 
-                </PrivateRoute>
-                <PrivateRoute exact path="/patient-registration">
-                    <PatientRegistrationForm /> 
-                </PrivateRoute>
-                <PrivateRoute exact path="/doctor-prescribed-form">
-                    <DoctorPrescribedForm /> 
-                </PrivateRoute>
-                <PrivateRoute exact path="/patients-report">
-                    <PatientsReport /> 
-                </PrivateRoute> 
-                <PrivateRoute exact path="/login2">
-                    <Login2 /> 
-                </PrivateRoute>
-                <PrivateRoute exact path="/call-report">
-                    <CallDetailReport /> 
-                </PrivateRoute>
-                <PrivateRoute exact>
-                    <h2 style={{display:'flex',alignItems:'center',justifyContent:'center'}}>Page Not Found </h2>
-                </PrivateRoute>
-            </Switch>
-        </Content>
-    )
+    return (
+      <Content style={{ background: "transparent" }}>
+        <Switch>
+          <PublicRoute exact path="/sign-in">
+            <Login2 />
+          </PublicRoute>
+          <PrivateRoute exact path="/dashboard">
+            <Dashboard />
+          </PrivateRoute>
+          <PrivateRoute exact path="/patient-registration">
+            <PatientRegistrationForm />
+          </PrivateRoute>
+          <PrivateRoute exact path="/doctor-prescribed-form">
+            <DoctorPrescribedForm />
+          </PrivateRoute>
+          <PrivateRoute exact path="/patients-report">
+            <PatientsReport />
+          </PrivateRoute>
+          <PrivateRoute exact path="/login2">
+            <Login2 />
+          </PrivateRoute>
+          <PrivateRoute exact path="/call-report">
+            <CallDetailReport />
+          </PrivateRoute>
+          <PrivateRoute>
+            <NotFound404 />
+          </PrivateRoute>
+        </Switch>
+      </Content>
+    );
 }
 
 // A wrapper for <Route> that redirects to the login
