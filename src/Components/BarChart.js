@@ -39,7 +39,7 @@ const Dankmemes = () => {
 
   useEffect(() => {
     chart();
-  }, []);
+  }, [chart()]);
   return (
     <div className="App">
       <h1 style={{display:'flex', justifyContent:'center', alignItems:'center'}}>Patients Data</h1>
