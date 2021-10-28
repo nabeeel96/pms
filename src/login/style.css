@@ -5,6 +5,7 @@
 	left: 0;
 	height: 100%;
 	z-index: -1;
+
 }
 
 .container{
@@ -49,7 +50,7 @@ a{
 	/* display: block; */
 	text-align: right;
 	text-decoration: none;
-	color: #999;
+	color: #000;
 	font-size: 0.9rem;
 	transition: .3s;
 }
@@ -119,8 +120,9 @@ a:hover{
 	}
 }
 
-.login-container {
-  background-image: url('../Assets/wave.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-}
+/* .login-container {
+	background-image: url('../Assets/wave.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+
+} */

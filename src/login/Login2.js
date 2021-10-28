@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import bg from "../Assets/bg.svg";
-import wave from "../Assets/wave.png";
+import waveI from "../Assets/wave.png";
 import avatar from "../Assets/avatar.svg";
 import './style.css'
 import { Row,Col,Form,Input } from 'antd';
@@ -55,13 +55,14 @@ const onFinish = (values) => {
         setChecked(false)
 }
     return (
-      <Row className="login-container">
+      <Row >
+          <img src={waveI} style={{position:'fixed', bottom:0, left:0,height:'100%'}} />
           <Col span={24} >
-          <img src={wave} alt="image" className="wave"/>
-	<div className="container">
-		<div className="img">
-            <img src={bg} alt="" />
-		</div>
+          <img src={waveI} alt="image" className="wave" />
+            <div className="container">
+            <div className="img">
+                <img src={bg} alt="" />
+            </div>
 		<div className="login-content">
 			<Form
             ref={formRef}
