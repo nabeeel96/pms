@@ -1,0 +1,28 @@
+.logo {
+    /*height: 32px;*/
+    /*background: rgba(255, 255, 255, 0.2);*/
+    margin: 0 10px;
+  }
+  
+  .site-layout-background {
+    background: #fff;
+  }
+  
+  .hideOnMobile {
+    display: none;
+  }
+  @media only screen and (min-width: 768px) {
+    .hideOnMobile {
+      display: block;
+    }
+  }
+  
+  .hideOnDesktop {
+    display: block;
+  }
+  @media only screen and (min-width: 768px) {
+    .hideOnDesktop {
+      display: none;
+    }
+  }
+  
