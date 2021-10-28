@@ -168,7 +168,7 @@ function Dashboard() {
                   </Button>
                   <Button type="primary">2021</Button>
                 </div>
-                <h2 style={{ marginTop: "20px" }}>$17562</h2>
+                <h2 style={{ marginTop: "20px" }}>PKR 175,62</h2>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's

@@ -9,12 +9,12 @@ const data = {
       data: [12, 19],
       backgroundColor: [
         'rgb(53, 169, 137)',
-        'rgb(245, 178, 37)',
+        'rgb(247, 224, 121)',
         
       ],
       borderColor: [
         'rgb(53, 169, 137)',
-        'rgb(245, 178, 37)',
+        'rgb(247, 224, 121)',
         
       ],
       borderWidth: 1,
