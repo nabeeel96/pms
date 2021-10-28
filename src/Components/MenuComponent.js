@@ -44,46 +44,54 @@ const MenuComponent = ({isToggled}) => {
     };
 
     return (
-        <Sider collapsed={isToggled} width={320} style={{overflow: 'hidden'}} >
-            
-            <Menu style={{height:'100%' }} mode="vertical"  defaultSelectedKeys={[selectedKey] }
-            
-                  openKeys={openKeys} onOpenChange={onOpenChange}
-            >
-                <div className="logo" style={{ textAlign: 'center', height:'45px', marginBottom:'40px' }}>
-                    <Link to="/dashboard">
-                        {/* style={{width: isToggled ? "" : "110px"}} */}
-                        <img src={isToggled ? small : logo} alt="App logo" style={{width:'auto', height:'60px'}} />
-                    </Link>
-            </div>
-                <Menu.Item key="/dashboard" icon={<RiDashboardLine />}>
-                    <Link to="/dashboard">
-                        Dashboard
-                    </Link>
-                </Menu.Item>
+      <Sider collapsed={isToggled} width={250} style={{ overflow: "hidden" }}>
+        <Menu
+          style={{ height: "100%" }}
+          mode="vertical"
+          defaultSelectedKeys={[selectedKey]}
+          openKeys={openKeys}
+          onOpenChange={onOpenChange}
+        >
+          <div
+            className="logo"
+            style={{
+              textAlign: "center",
+              height: "45px",
+              marginBottom: "40px",
+            }}
+          >
+            <Link to="/dashboard">
+              {/* style={{width: isToggled ? "" : "110px"}} */}
+              {isToggled ? (
+                <img src={small} alt="App logo" height={40} />
+              ) : (
+                <img src={logo} alt="App logo" height={50} width={150} />
+              )}
+            </Link>
+          </div>
+          <Menu.Item key="/dashboard" icon={<RiDashboardLine />}>
+            <Link to="/dashboard">Dashboard</Link>
+          </Menu.Item>
 
-                <SubMenu title="Forms" key="pmsforms" icon={<RiNurseLine/>}>
-                <Menu.Item key="/PR" icon={<UserAddOutlined/>}>
-                    <Link to="/patient-registration">Patient Registration</Link>
-                </Menu.Item>
-                <Menu.Item key="/dpf" icon={<VscNote />}>
-                    <Link to={"/doctor-prescribed-form"}>Doctor Prescribed Form</Link>
-                </Menu.Item> 
-                </SubMenu>
-                <SubMenu title="Reports" key="pmsreports" icon={<VscNote/>}>  
-                <Menu.Item key="pr" icon={<RiTableAltLine/>}>
-                    <Link to="/patients-report"> Patients Report </Link>
-                </Menu.Item> <Menu.Item key="cr" icon={<RiTableAltLine/>}>
-                    <Link to="/call-report"> Call Detailed Report</Link>
-                </Menu.Item>
-                    
-
-                </SubMenu>
-                
-                
-            </Menu>
-        </Sider>
-    )
+          <SubMenu title="Forms" key="pmsforms" icon={<RiNurseLine />}>
+            <Menu.Item key="/PR" icon={<UserAddOutlined />}>
+              <Link to="/patient-registration">Patient Registration</Link>
+            </Menu.Item>
+            <Menu.Item key="/dpf" icon={<VscNote />}>
+              <Link to={"/doctor-prescribed-form"}>Doctor Prescribed Form</Link>
+            </Menu.Item>
+          </SubMenu>
+          <SubMenu title="Reports" key="pmsreports" icon={<VscNote />}>
+            <Menu.Item key="pr" icon={<RiTableAltLine />}>
+              <Link to="/patients-report"> Patients Report </Link>
+            </Menu.Item>{" "}
+            <Menu.Item key="cr" icon={<RiTableAltLine />}>
+              <Link to="/call-report"> Call Detailed Report</Link>
+            </Menu.Item>
+          </SubMenu>
+        </Menu>
+      </Sider>
+    );
 }
 
 export default MenuComponent
