@@ -28,7 +28,7 @@ const ContentComponent = () => {
     }, [location])
  
     return(
-        <Content style={{  background: 'transparent',padding:'20px' }}>
+        <Content style={{  background: 'transparent'}}>
             <Switch>
                 <PublicRoute exact path="/sign-in">
                     <Login2/>

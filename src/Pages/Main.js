@@ -32,7 +32,7 @@ function Main() {
       <Layout style={{background:'#f4f5f6'}}>
           {User.loggedIn &&<HeaderComponent style={{float:'right'}} User={User} setToggled={setToggled} isToggled={isToggled} />}
           <ContentComponent />
-          <Footer style={{ textAlign: 'center', fontWeight: 'bold', background: '#f4f5f6', color: '#35a989' }}>Patient Management System ©2021 | Powered by Telecard Ltd.</Footer>
+          {User.loggedIn &&<Footer style={{ textAlign: 'center', fontWeight: 'bold', background: '#f4f5f6', color: '#35a989' }}>Patient Management System ©2021 | Powered by Telecard Ltd.</Footer>}
       </Layout>
   </Layout>
     )
