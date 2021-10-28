@@ -60,7 +60,7 @@ const bgImg = {
 function Dashboard() {
   return (
     <div>
-      <Row justify="space-around">
+      <Row justify="space-around" >
         <Col span={24}>
           <div style={bgImg}>
             <h4 style={{ fontWeight: "600", fontSize: "18px", color: "white" }}>
@@ -71,9 +71,9 @@ function Dashboard() {
             </h5>
           </div>
         </Col>
-        <Col span={24} style={{ position: "relative", top: "-68px" }}>
-          <Row justify="space-around">
-            <Col span={5}>
+        <Col span={24} style={{ position: "relative", top: "-68px", padding:'0 10px'}}>
+          <Row gutter={[20,20]}>
+            <Col  xl={6} lg={6} md={12} sm={12} xs={24}>
               <Card style={cardStyling}>
                 <div>
                   <h5 style={textRight}>PATIENTS</h5>
@@ -91,7 +91,7 @@ function Dashboard() {
                 </div>
               </Card>
             </Col>
-            <Col span={5}>
+            <Col xl={6} lg={6} md={12} sm={12} xs={24}>
               <Card style={cardStyling}>
                 <div>
                   <h5 style={textRight}>REPORTS</h5>
@@ -109,7 +109,7 @@ function Dashboard() {
                 </div>
               </Card>
             </Col>
-            <Col span={5}>
+            <Col xl={6} lg={6} md={12} sm={12} xs={24}>
               <Card style={cardStyling}>
                 <div>
                   <h5 style={textRight}>CLINICS</h5>
@@ -127,7 +127,7 @@ function Dashboard() {
                 </div>
               </Card>
             </Col>
-            <Col span={5}>
+            <Col xl={6} lg={6} md={12} sm={12} xs={24}>
               <Card style={cardStyling}>
                 <div>
                   <h5 style={textRight}>DOCTORS</h5>
@@ -151,12 +151,12 @@ function Dashboard() {
       <Row style={{padding:'10px'}} gutter={[20, 5]}>
         <Col xs={24} sm={24} md={24} lg={18}>
           <Row>
-            <Col span={18}>
+            <Col xs={24} sm={24} md={24} lg={24} xl={18}>
               <Card>
                 <BarChart />
               </Card>
             </Col>
-            <Col span={6}>
+            <Col xs={24} sm={24} md={24} lg={24} xl={6}>
               <Card style={{ height: "100%" }}>
                 <h4>Yearly Patients Report</h4>
                 <div style={{ marginTop: "20px" }}>
@@ -171,11 +171,7 @@ function Dashboard() {
                 <h2 style={{ marginTop: "20px" }}>PKR 175,62</h2>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500sLorem Ipsum is simply
-                  dummy text of the printing and typesetting industry. Lorem
-                  Ipsum has been the industry's standard dummy text ever since
-                  the 1500s{" "}
+                  typesetting industry. Lorem Ipsum has been the 
                 </p>
                 <a href="#">Read More...</a>
               </Card>
@@ -183,7 +179,7 @@ function Dashboard() {
           </Row>
         </Col>
         <Col xs={24} sm={24} md={24} lg={6}>
-          <Card style={{ height: "500px" }}>
+          <Card style={{ height: "100%" }}>
             <PieChart />
           </Card>
         </Col>
