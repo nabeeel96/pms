@@ -88,7 +88,7 @@ const onFinish = (values) => {
                                     },
                                 ]}
                             >
-                                <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
+                                <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="User Name" />
                             </Form.Item>
 
                             <Form.Item

@@ -26,3 +26,6 @@
     }
   }
   
+  .ant-modal-title, .ant-modal-close {
+    color: white;
+}

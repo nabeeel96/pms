@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import { Divider, Layout} from "antd"
-import '../App.less'
 import '../index.less'
+import '../App.less'
 import MenuComponent from '../Components/MenuComponent';
 import HeaderComponent from '../Components/HeaderComponent';
 import ContentComponent from '../Components/ContentComponent';

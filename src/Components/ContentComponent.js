@@ -15,6 +15,7 @@ import PatientsReport from "../Reports/PatientsReport";
 import CallDetailReport from "../Reports/CallDetailReport";
 import Login2 from "../login/Login2";
 import NotFound404 from "../Pages/404";
+import PaoReport from "../Pao/PaoReport";
 
 
 const { Content } = Layout
@@ -51,6 +52,9 @@ const ContentComponent = () => {
           </PrivateRoute>
           <PrivateRoute exact path="/call-report">
             <CallDetailReport />
+          </PrivateRoute>
+          <PrivateRoute exact path="/pao">
+            <PaoReport />
           </PrivateRoute>
           <PrivateRoute>
             <NotFound404 />
