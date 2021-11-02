@@ -1,4 +1,4 @@
-import { InboxOutlined, SmileOutlined } from "@ant-design/icons";
+import { FileExcelTwoTone, InboxOutlined, SmileOutlined } from "@ant-design/icons";
 import {
   Form,
   Input,
@@ -13,11 +13,12 @@ import {
   Row,
   Divider,
 } from "antd";
+import Dragger from "antd/lib/upload/Dragger";
 import { useState } from "react";
 
 const PatientRegistrationForm = () => {
   const [value, setValue] = useState();
-
+  const { Dragger } = Upload;
   
 
   const config = {
@@ -48,12 +49,12 @@ const PatientRegistrationForm = () => {
   return (
     <>
     <Divider orientation="left"> Patient Registration Form </Divider>
-    <Card style={{ margin: "30px" }}>
+    <Card style={{ margin: "30px", display:'flex', justifyContent:'center', alignContent:'center' }}>
       <Form  onFinish={onFinish} layout="vertical">
         <Row gutter={[100, 10]}>
         <Col span={24}>
           <Row gutter={[80]}>
-            <Col span={8}>
+            <Col xl={8} lg={8} md={24} sm={24} xs={24}>
               <Form.Item
                 style={{ width: "100%" }}
                 label="First Name"
@@ -65,12 +66,12 @@ const PatientRegistrationForm = () => {
                 <Input />
               </Form.Item>
             </Col>
-            <Col span={8}>
+            <Col xl={8} lg={8} md={24} sm={24} xs={24}>
               <Form.Item label="Middle Name" name="middle">
                 <Input />
               </Form.Item>
             </Col>
-            <Col span={8}>
+            <Col xl={8} lg={8} md={24} sm={24} xs={24}>
               <Form.Item
                 label="Last Name"
                 name="username"
@@ -85,7 +86,7 @@ const PatientRegistrationForm = () => {
         </Col>
         <Col span={24}>
           <Row gutter={[80]}>
-            <Col span={8}>
+            <Col xl={8} lg={8} md={24} sm={24} xs={24}>
               <Form.Item
                 label="Contact Number"
                 name="contact"
@@ -99,7 +100,7 @@ const PatientRegistrationForm = () => {
                 <Input style={{ width: "100%" }} />
               </Form.Item>
             </Col>
-            <Col span={8}>
+            <Col xl={8} lg={8} md={24} sm={24} xs={24}>
               <Form.Item
                 label="Email Address"
                 name="email"
@@ -113,7 +114,7 @@ const PatientRegistrationForm = () => {
                 <Input />
               </Form.Item>
             </Col>
-            <Col span={8}>
+            <Col xl={8} lg={8} md={24} sm={24} xs={24}>
             <Form.Item name="maritial" label="Maritial Status">
                 <Select
                   defaultValue="Select Maritial Status"
@@ -132,7 +133,7 @@ const PatientRegistrationForm = () => {
         <Col span={24}>
           <Row gutter={[80]}>
            
-            <Col span={12}>
+            <Col xl={12} lg={12} md={12} sm={24} xs={24}>
               <Form.Item name="gender" label="Gender">
                 <Select defaultValue="Select Gender" style={{ width: "100%" }}>
                   <Option value="male">Male</Option>
@@ -141,7 +142,7 @@ const PatientRegistrationForm = () => {
                 </Select>
               </Form.Item>
             </Col>
-            <Col span={12}>
+            <Col xl={12} lg={12} md={12} sm={24} xs={24}>
             <Form.Item
                 label="City"
                 name="city"
@@ -157,7 +158,7 @@ const PatientRegistrationForm = () => {
 
         <Col span={24}>
           <Row gutter={[80]}>
-            <Col span={12}>
+            <Col xl={12} lg={12} md={12} sm={24} xs={12}>
               <Form.Item
                 label="State"
                 name="state"
@@ -168,7 +169,7 @@ const PatientRegistrationForm = () => {
                 <Input />
               </Form.Item>
             </Col>
-            <Col span={12}>
+            <Col xl={12} lg={12} md={12} sm={24 } xs={24}>
               <Form.Item
                 label="Zip"
                 name="zip"
@@ -181,6 +182,30 @@ const PatientRegistrationForm = () => {
             </Col>
           </Row>
         </Col>
+                <Col  xl={12} lg={12} md={24} sm={24} xs={24}>
+                  <Form.Item
+                  
+                    name="number"
+                    label="Upload your previous documents "
+                    
+                  >
+                    <Dragger
+                      height={232}
+                      listType="picture"
+                    >
+                      <p className="ant-upload-drag-icon">
+                        <FileExcelTwoTone />
+                      </p>
+                      <p className="ant-upload-text">
+                        Click or drag file to this area to upload
+                      </p>
+                      <p className="ant-upload-hint">
+                        You can upload campaign numbers through the CSV
+                        file by clicking here.
+                      </p>
+                    </Dragger>
+                  </Form.Item>
+                </Col>
         </Row>
         
 

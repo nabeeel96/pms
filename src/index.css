@@ -36,3 +36,11 @@
   /* flex-direction: row-reverse!important; */
 }
 
+.ant-table-thead {
+  font-size: 18px;
+  font-family: Gilroy;
+}
+
+.ant-modal-title, .ant-modal-close {
+  color: white !important;
+}

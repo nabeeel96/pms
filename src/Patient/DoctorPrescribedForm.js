@@ -1,4 +1,4 @@
-import { InboxOutlined, SmileOutlined } from "@ant-design/icons";
+import { InboxOutlined, PlusOutlined, SmileOutlined } from "@ant-design/icons";
 import {
   Form,
   Input,
@@ -12,13 +12,43 @@ import {
   Col,
   Row,
   Divider,
+  Modal,
 } from "antd";
 import { useState } from "react";
 
+function getBase64(file) {
+  return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = error => reject(error);
+  });
+}
+
 const DoctorPrescribedForm = () => {
   const [value, setValue] = useState();
+  const [previewVisible, setPreviewVisible] = useState(false)
+  const [previewImage, setPreviewImage] = useState('')
+  const [previewTitle, setPreviewTitle] = useState('')
+  const [fileList, setFileList] = useState([])
 
-
+  const handleCancel = () => setPreviewImage(false);
+  const handlePreview = async file => {
+      if (!file.url && !file.preview) {
+          file.preview = await getBase64(file.originFileObj);
+      }
+      console.log('sssssssssss',file);
+      setPreviewImage(file.url || file.preview)
+      setPreviewVisible(true)
+      setPreviewTitle(file.name);
+  };
+  const handleChange = ({ fileList }) => setFileList(fileList);
+  const uploadButton = (
+    <div>
+        <PlusOutlined />
+        <div style={{ marginTop: 8 }}>Upload</div>
+    </div>
+);
 
   const config = {
     rules: [
@@ -125,6 +155,27 @@ const DoctorPrescribedForm = () => {
                   </Form.Item>
                 </Col>
               </Row>
+            </Col>
+            <Col span={24}>
+              <Form.Item
+              label="Upload Media files">
+              <Upload
+                listType="picture-card"
+                fileList={fileList}
+                onPreview={handlePreview}
+                onChange={handleChange}
+            >
+                {fileList.length >= 8 ? null : uploadButton}
+            </Upload>
+            <Modal
+                visible={previewVisible}
+                title={previewTitle}
+                footer={null}
+                onCancel={()=>setPreviewVisible(false)}
+            >
+                <img alt="example" style={{ width: '100%' }} src={previewImage} />
+            </Modal>
+              </Form.Item>
             </Col>
           </Row>
           <Button style={{marginTop:'20px'}} type="primary" htmlType="submit">
