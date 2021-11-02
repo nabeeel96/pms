@@ -161,7 +161,7 @@ const PaoReport = () => {
             fontSize: "25px",
           }}
         >
-            PAO REPORTS
+            Patients data
         </h1>
         <div style={{ textAlign: "right", marginBottom: "2px", marginRight:'20px' }}>
           <Space>
@@ -195,8 +195,6 @@ const PaoReport = () => {
         setVisible={filterVisible ? setFilterVisible : setAssign}
         component={filterVisible ? <CallDetailedReportFilter /> : <AssignAgent/>}
       />
-
-
     </Row>
   );
 
