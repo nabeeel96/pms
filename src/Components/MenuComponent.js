@@ -51,24 +51,24 @@ const MenuComponent = ({isToggled}) => {
                         Dashboard
                     </Link>
                 </Menu.Item>
-                <SubMenu title="Forms" key="pmsforms" icon={<RiNurseLine/>}>
-                <Menu.Item key="/PR" icon={<UserAddOutlined />}>
-                    <Link to="/patient-registration">Patient Registration</Link>
+                {/* <SubMenu title="Forms" key="pmsforms" icon={<RiNurseLine/>}> */}
+                <Menu.Item title="Patient Enrollment" key="/PR" icon={<UserAddOutlined />}>
+                    <Link to="/patient-registration">Patient Enrollment</Link>
                 </Menu.Item>
-                <Menu.Item key="/dpf" icon={<VscNote />}>
-                    <Link to={"/doctor-prescribed-form"}>Doctor Prescribed Form</Link>
+                <Menu.Item key="/d&d" icon={<VscNote />}>
+                    <Link to={"/d&d"}>Data & Documentations</Link>
                 </Menu.Item> 
-                </SubMenu>
-                <SubMenu title="Reports" key="pmsreports" icon={<VscNote/>}>  
-                <Menu.Item key="pr" icon={<RiTableAltLine/>}>
-                    <Link to="/patients-report"> Patients Report </Link>
+                {/* </SubMenu> */}
+                {/* <SubMenu title="Reports" key="pmsreports" icon={<VscNote/>}>   */}
+                <Menu.Item key="ea" icon={<RiTableAltLine/>}>
+                    <Link to="/enrollment-approval"> Enrollment Approval </Link>
                 </Menu.Item> 
-                <Menu.Item key="cr" icon={<RiTableAltLine/>}>
-                    <Link to="/call-report"> Call Detailed Report</Link>
+                <Menu.Item key="dist" icon={<RiTableAltLine/>}>
+                    <Link to="/distribution"> Distribution</Link>
                 </Menu.Item>
-                </SubMenu>
-                <Menu.Item key="pao" icon={<RiTableAltLine/>}>
-                    <Link to="/pao"> PAO Report </Link>
+                {/* </SubMenu> */}
+                <Menu.Item key="delivery" icon={<RiTableAltLine/>}>
+                    <Link to="/delivery"> Delivery </Link>
                 </Menu.Item>
                 
                 
