@@ -34,6 +34,9 @@ const ContentComponent = () => {
     return (
       <Content style={{ background: "transparent" }}>
         <Switch>
+          <Route exact path='/'>
+            <Redirect to="/dashboard" />
+          </Route>
           <PublicRoute exact path="/sign-in">
             <Login2 />
           </PublicRoute>

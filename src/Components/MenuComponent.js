@@ -7,7 +7,7 @@ import { useEffect, useState } from "react"
 import Sider from "antd/es/layout/Sider";
 import logo from "../Assets/LOGO.png";
 import small from "../Assets/favicon.png";
-import {VscNote,RiDashboardLine,RiNurseLine,RiTableAltLine} from 'react-icons/all'
+import {RiDashboardLine,RiNurseLine,RiTableAltLine,BsTruck,RiEBike2Line,MdOutlineFactCheck,CgFileDocument} from 'react-icons/all'
 
 const { SubMenu } = Menu
 const rootSubmenuKeys = ['sub1', 'sub2'];
@@ -55,19 +55,19 @@ const MenuComponent = ({isToggled}) => {
                 <Menu.Item title="Patient Enrollment" key="/PR" icon={<UserAddOutlined />}>
                     <Link to="/patient-registration">Patient Enrollment</Link>
                 </Menu.Item>
-                <Menu.Item key="/d&d" icon={<VscNote />}>
+                <Menu.Item key="/d&d" icon={<CgFileDocument />}>
                     <Link to={"/d&d"}>Data & Documentations</Link>
                 </Menu.Item> 
                 {/* </SubMenu> */}
                 {/* <SubMenu title="Reports" key="pmsreports" icon={<VscNote/>}>   */}
-                <Menu.Item key="ea" icon={<RiTableAltLine/>}>
+                <Menu.Item key="ea" icon={<MdOutlineFactCheck/>}>
                     <Link to="/enrollment-approval"> Enrollment Approval </Link>
                 </Menu.Item> 
-                <Menu.Item key="dist" icon={<RiTableAltLine/>}>
+                <Menu.Item key="dist" icon={<RiEBike2Line/>}>
                     <Link to="/distribution"> Distribution</Link>
                 </Menu.Item>
                 {/* </SubMenu> */}
-                <Menu.Item key="delivery" icon={<RiTableAltLine/>}>
+                <Menu.Item key="delivery" icon={<BsTruck/>}>
                     <Link to="/delivery"> Delivery </Link>
                 </Menu.Item>
                 
