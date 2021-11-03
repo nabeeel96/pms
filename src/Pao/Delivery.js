@@ -17,6 +17,7 @@ import {
   Select,
   DatePicker,
 } from "antd";
+
 import ModalComponent from "../Components/ModalComponents";
 import PatientRegistrationForm from "../Patient/PatientRegistrationForm";
 
