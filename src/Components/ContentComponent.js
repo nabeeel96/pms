@@ -17,6 +17,7 @@ import Login2 from "../login/Login2";
 import NotFound404 from "../Pages/404";
 import PaoReport from "../Pao/PaoReport";
 import Distribution from "../Pao/Distribution";
+import Delivery from "../Pao/Delivery";
 
 
 const { Content } = Layout
@@ -46,7 +47,7 @@ const ContentComponent = () => {
             <CallDetailReport />
           </PrivateRoute>
           <PrivateRoute exact path="/delivery">
-            <h1>NO DATA</h1>
+            <Delivery/>
           </PrivateRoute>
           <PrivateRoute exact path="/login2">
             <Login2 />
