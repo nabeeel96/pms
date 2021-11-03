@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
-    CheckOutlined,
+  CheckOutlined,
   CloseCircleOutlined,
   CloseOutlined,
   DeleteOutlined,
@@ -28,10 +28,8 @@ import PatientRegistrationForm from "../Patient/PatientRegistrationForm";
 const PaoReport = () => {
   const [filterVisible, setFilterVisible] = useState(false);
   const [resetFilter, setResetFilter] = useState(false);
-  const [assign, setAssign] = useState(false)
+  const [assign, setAssign] = useState(false);
 
-
-  
   const columns = [
     {
       title: "Patient Name",
@@ -43,7 +41,6 @@ const PaoReport = () => {
       title: "Assign to agent",
       dataIndex: "assign",
       key: "assign",
-     
     },
     {
       title: "Contact Number ",
@@ -161,9 +158,15 @@ const PaoReport = () => {
             fontSize: "25px",
           }}
         >
-            Patients data
+          Patients data
         </h1>
-        <div style={{ textAlign: "right", marginBottom: "2px", marginRight:'20px' }}>
+        <div
+          style={{
+            textAlign: "right",
+            marginBottom: "2px",
+            marginRight: "20px",
+          }}
+        >
           <Space>
             <Button
               onClick={() => resetFormFilter()}
@@ -189,15 +192,20 @@ const PaoReport = () => {
       </Col>
 
       <ModalComponent
-        title="Assign to Agent" 
-        footer={<Button onClick={()=>setFilterVisible(false)} type="primary">Submit</Button>}
+        title="Assign to Agent"
+        footer={
+          <Button onClick={() => setFilterVisible(false)} type="primary">
+            Submit
+          </Button>
+        }
         visible={filterVisible ? filterVisible : assign}
         setVisible={filterVisible ? setFilterVisible : setAssign}
-        component={filterVisible ? <CallDetailedReportFilter /> : <AssignAgent/>}
+        component={
+          filterVisible ? <CallDetailedReportFilter /> : <AssignAgent />
+        }
       />
     </Row>
   );
-
 };
 const CallDetailedReportFilter = ({ visible, setVisible, resetField }) => {
   const [form] = Form.useForm();
@@ -225,7 +233,6 @@ const CallDetailedReportFilter = ({ visible, setVisible, resetField }) => {
     </>
   );
 };
-
 
 const AssignAgent = ({ visible, setVisible, resetField }) => {
   const [form] = Form.useForm();
