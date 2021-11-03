@@ -5,6 +5,7 @@ import StackedBar from "../Components/BarChart";
 import PieChart from "../Components/PieChart";
 import bg from "../Assets/bg.jpg";
 import BarChart from "../Components/BarChart";
+import { HiOutlineDocumentReport,BiClinic,GiStethoscope,FaHospitalUser,FaUserMd, } from "react-icons/all";
 
 const cardStyling = {
   flex: "1 1 auto",
@@ -29,7 +30,23 @@ const iconClass = {
   fontSize: "4.5rem",
   position: "absolute",
   right: "56px",
-  top: "-18px",
+  top: "-15px",
+  color: "#ffffff4d",
+};
+
+const reportIconClass = {
+  fontSize: "4.5rem",
+  position: "absolute",
+  right: "56px",
+  top: "-14px",
+  color: "#ffffff4d",
+};
+
+const doctorIconClass = {
+  fontSize: "4.5rem",
+  position: "absolute",
+  right: "56px",
+  top: "-8px",
   color: "#ffffff4d",
 };
 
@@ -87,7 +104,7 @@ function Dashboard() {
                   </div>
                 </div>
                 <div style={iconClass}>
-                  <CiOutlined />
+                  <FaHospitalUser />
                 </div>
               </Card>
             </Col>
@@ -104,8 +121,8 @@ function Dashboard() {
                     </span>
                   </div>
                 </div>
-                <div style={iconClass}>
-                  <CiOutlined />
+                <div style={reportIconClass}>
+                  <HiOutlineDocumentReport />
                 </div>
               </Card>
             </Col>
@@ -122,8 +139,8 @@ function Dashboard() {
                     </span>
                   </div>
                 </div>
-                <div style={iconClass}>
-                  <CiOutlined />
+                <div style={reportIconClass}>
+                  <BiClinic />
                 </div>
               </Card>
             </Col>
@@ -140,8 +157,8 @@ function Dashboard() {
                     </span>
                   </div>
                 </div>
-                <div style={iconClass}>
-                  <CiOutlined />
+                <div style={doctorIconClass}>
+                  <FaUserMd />
                 </div>
               </Card>
             </Col>

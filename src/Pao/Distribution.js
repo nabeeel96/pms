@@ -40,7 +40,7 @@ const Distribution = () => {
       dataIndex: "pds",
       key: "pds",
     },
-    ];
+  ];
   const data = [
     {
       distr: "Karachi",
@@ -48,14 +48,14 @@ const Distribution = () => {
       pds: "1 ",
     },
     {
-        distr: "Lahore",
-        hospital: "South City Hospital",
-        pds: "2 ",
+      distr: "Lahore",
+      hospital: "South City Hospital",
+      pds: "2 ",
     },
     {
-        distr: "Karachi",
-        hospital: "Indus Hospital",
-        pds: "1 ",
+      distr: "Karachi",
+      hospital: "Indus Hospital",
+      pds: "1 ",
     },
   ];
   const onSearch = (value) => console.log(value);
@@ -95,7 +95,13 @@ const Distribution = () => {
         >
           Distribution
         </h1>
-        <div style={{ textAlign: "right", marginBottom: "2px", marginRight:'20px' }}>
+        <div
+          style={{
+            textAlign: "right",
+            marginBottom: "2px",
+            marginRight: "20px",
+          }}
+        >
           <Space>
             <Button
               onClick={() => resetFormFilter()}
@@ -120,9 +126,12 @@ const Distribution = () => {
         />
       </Col>
       <ModalComponent
-        
         title="Nabeel "
-        footer={<Button onClick={()=>setFilterVisible(false)} type="primary">Submit</Button>}
+        footer={
+          <Button onClick={() => setFilterVisible(false)} type="primary">
+            Submit
+          </Button>
+        }
         visible={filterVisible}
         setVisible={setFilterVisible}
         component={<CallDetailedReportFilter />}
